@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import UserService from '../services/user.service';
 
 // Show Loan Applicant View
+const handleLoanRequest = () => {
+    alert("Loan Request Sent Successfully.")
+}
 
 const BoardLoanApplicant = () => {
     const [content, setContent] = useState();
@@ -24,6 +27,8 @@ const BoardLoanApplicant = () => {
             <header className="jumbotron">
                 <h3>{content}</h3>
             </header>
+            <h3>Your Journey Begins Here:</h3>
+            <button onClick={handleLoanRequest}>Request New Loan</button>
         </div>
     )
 }
